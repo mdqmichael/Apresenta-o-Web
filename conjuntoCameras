@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Proposta Segurança - Michael da Horus</title>
+    <style>
+        :root {
+            --horus-orange: #FF6600;
+            --horus-orange-dark: #E65C00;
+            --horus-dark: #333333;
+            --horus-gray-light: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            background-color: #f0f0f0; 
+            margin: 0; 
+            padding: 20px 0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            zoom: 0.7; 
+        }
+
+        .no-print { margin-bottom: 15px; }
+        button { 
+            background: #28a745; color: white; padding: 10px 20px; 
+            border: none; border-radius: 6px; cursor: pointer; font-weight: bold; 
+        }
+
+        .page-container {
+            width: 1200px;
+            background: transparent;
+        }
+
+        /* CABEÇALHO MAIS COMPACTO */
+        header { 
+            background: linear-gradient(135deg, var(--horus-orange), var(--horus-orange-dark)) !important; 
+            color: white !important; 
+            padding: 20px 40px; /* Reduzido de 40px para 20px */
+            border-radius: 15px;
+            margin-bottom: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        header h1 { 
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 65px; /* Reduzido de 95px */
+            margin: 0; 
+            font-weight: 100;
+            line-height: 1;
+        }
+
+        header p { 
+            font-size: 0.9rem; /* Reduzido */
+            margin-top: 5px; 
+            opacity: 0.95; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            font-weight: bold;
+        }
+
+        .cards-grid { 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .card { 
+            background: var(--white) !important; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05); 
+            border: 1px solid #ddd; 
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .header-card { 
+            background: var(--horus-dark) !important; 
+            color: white !important; 
+            padding: 12px; 
+            text-align: center; font-weight: bold; font-size: 12px; text-transform: uppercase;
+        }
+
+        .card-content { padding: 25px; flex-grow: 1; }
+
+        .product-title { 
+            color: var(--horus-orange) !important; 
+            font-size: 20px; font-weight: 800; margin-bottom: 10px; line-height: 1.2;
+        }
+
+        .desc-box {
+            background: var(--horus-gray-light) !important;
+            border-left: 4px solid var(--horus-orange);
+            padding: 12px; border-radius: 8px; margin-bottom: 15px;
+        }
+
+        .desc-box p { font-size: 13px; color: #444 !important; line-height: 1.5; margin: 0; }
+
+        ul { padding: 0; margin: 0; list-style: none; }
+
+        li { 
+            margin-bottom: 8px; font-size: 13.5px; color: var(--horus-dark) !important;
+            line-height: 1.4; display: flex; align-items: flex-start;
+        }
+
+        li::before {
+            content: "✓"; color: var(--horus-orange) !important;
+            font-weight: bold; margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 15px; text-align: center; font-size: 0.85rem; color: #666;
+        }
+
+        @media print { 
+            .no-print { display: none; } 
+            body { zoom: 1; background: white !important; padding: 0; }
+            .page-container { width: 100%; }
+            @page { size: portrait; margin: 10mm; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()">GERAR PDF / CAPTURAR TELA</button>
+    </div>
+
+    <div class="page-container">
+        <header>
+            <h1>Michael da Horus</h1>
+            <p>Segurança Eletrônica e Monitoramento IP</p>
+        </header>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="header-card">Gestão de Imagens</div>
+                <div class="card-content">
+                    <div class="product-title">Gravador Digital 16 Canais</div>
+                    <div class="desc-box">
+                        <p>Central de processamento robusta para alta densidade de câmeras IP e analógicas.</p>
+                    </div>
+                    <ul>
+                        <li><b>Capacidade:</b> Gerenciamento de 16 câmeras Ultra HD.</li>
+                        <li><b>Acesso:</b> Visualização em tempo real via Intelbras Cloud.</li>
+                        <li><b>Inteligência:</b> Detecção e analíticos de vídeo integrados.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header-card">Monitoramento Pontual</div>
+                <div class="card-content">
+                    <div class="product-title">Câmeras IP VIP 1230</div>
+                    <div class="desc-box">
+                        <p>Resolução Full HD com excelente custo-benefício para ambientes diversos.</p>
+                    </div>
+                    <ul>
+                        <li><b>Resolução:</b> Imagens 1080p nítidas para identificação.</li>
+                        <li><b>IR Inteligente:</b> Visão noturna automática de longo alcance.</li>
+                        <li><b>Durabilidade:</b> Proteção IP67 contra sol e chuva intensos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header-card">Monitoramento Estratégico</div>
+                <div class="card-content">
+                    <div class="product-title">Câmera VIPW 1300 SD</div>
+                    <div class="desc-box">
+                        <p>Speed Dome Wi-Fi para monitoramento dinâmico com movimentação PTZ.</p>
+                    </div>
+                    <ul>
+                        <li><b>Mobilidade:</b> Controle de rotação e zoom pelo smartphone.</li>
+                        <li><b>Flexibilidade:</b> Instalação via Wi-Fi ou cabo de rede.</li>
+                        <li><b>Segurança:</b> Backup local via cartão micro SD.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header-card">Infraestrutura e Energia</div>
+                <div class="card-content">
+                    <div class="product-title">Switch Intelbras Fast PoE</div>
+                    <div class="desc-box">
+                        <p>Transmissão de dados e energia unificados para câmeras IP.</p>
+                    </div>
+                    <ul>
+                        <li><b>PoE Ativo:</b> Alimenta as câmeras pelo próprio cabo de rede.</li>
+                        <li><b>Estabilidade:</b> Fluxo de dados contínuo sem quedas de imagem.</li>
+                        <li><b>Proteção:</b> Resistência a surtos elétricos em todas as portas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><b>Horus Distribuidora</b> • Palmas • Tocantins</p>
+        </footer>
+    </div>
+
+</body>
+</html>
